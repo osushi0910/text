@@ -10,10 +10,10 @@
 <body style="margin: 0; overflow: hidden;">
   <!-- AR.js 會自動使用相機 -->
   <a-scene embedded arjs>
-    <!-- 放置 AR 物件的標記 -->
+    <!-- 放置 AR 物件的標記 -->           
     <a-marker preset="hiro">
      <a-entity text="width: 5; value: e04" position='0 0 0'></a-entity> <!-- 加上文字 -->
-     <a-entity id='gltf' gltf-model="url(res/scene.gltf)" position='0 1 0' scale='0.2 0.2 0.2'></a-entity> <!-- 加上3D模型 -->      
+     <a-entity id='gltf' gltf-model="res/scene.gltf" position='0 1 0' scale='0.2 0.2 0.2'></a-entity> <!-- 加上3D模型 -->         
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
