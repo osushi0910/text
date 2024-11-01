@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/jeromeetienne/AR.js/3.3.2/aframe/build/aframe-ar.min.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
+      <a-marker preset="custom" type="pattern" url="assets/mark1.patt"> <!-- 更新標記的路徑 -->
+        <a-entity
+          id="interactive-model"
+          gltf-model="url(res/scene.gltf)"  <!-- 你的模型路徑 -->
+          position="0 0 0"
+          scale="0.5 0.5 0.5"
+          rotation="0 180 0"
+          class="clickable"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+
+    <script>
+      const model = document.getElementById('interactive-model');
+
+      // 當用戶點擊模型時的事件
+      model.addEventListener('click', function () {
+        // 隨機生成顏色
+        const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        model.setAttribute('material', 'color', randomColor);
+      });
+    </script>
+  </body>
+</html>
