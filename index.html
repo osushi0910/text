@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+  <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>  
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
   <!-- AR.js 會自動使用相機 -->
@@ -10,7 +13,7 @@
     <!-- 放置 AR 物件的標記 -->
     <a-marker preset="hiro">
      <a-entity text="width: 5; value: e04" position='0 0 0'></a-entity> <!-- 加上文字 -->
-     <a-entity id='gltf' gltf-model="url(res/scene.gltf)" position='0 1 0' scale='0.2 0.2 0.2'></a-entity> <!-- 加上3D模型 -->
+     <a-entity id='gltf' gltf-model="url(res/scene.gltf)" position='0 1 0' scale='0.2 0.2 0.2'></a-entity> <!-- 加上3D模型 -->      
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
