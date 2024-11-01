@@ -15,22 +15,8 @@
           gltf-model="url(res/scene.gltf)"  <!-- 你的模型路徑 -->
           position="0 0 0"
           scale="0.5 0.5 0.5"
-          rotation="0 180 0"
-          class="clickable"
+          rotation="0 0 0"
         ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
-
-    <script>
-      const model = document.getElementById('interactive-model');
-
-      // 當用戶點擊模型時的事件
-      model.addEventListener('click', function () {
-        // 隨機生成顏色
-        const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-        model.setAttribute('material', 'color', randomColor);
-      });
-    </script>
-  </body>
-</html>
